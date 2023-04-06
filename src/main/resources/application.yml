@@ -1,0 +1,9 @@
+# connect configs
+
+
+
+spring:
+  config:
+    import: configs/application-database.yml
+server:
+  port: 8080
