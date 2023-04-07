@@ -1,9 +1,12 @@
-# connect configs
-
-
-
 spring:
   config:
     import: configs/application-database.yml
+
 server:
   port: 8080
+
+
+application:
+  storage:
+    location: /home/maksym/Programming/Java/restapp/src/main/resources/storage/
+    max-file-size: 10000000

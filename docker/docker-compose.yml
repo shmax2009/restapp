@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  #  postgres:
+  db:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: restapp
+    ports:
+      - "5432:5432"
+    volumes:
+      - /home/maksym/Programming/Java/restapp/docker/postgres:/var/lib/postgresql/data

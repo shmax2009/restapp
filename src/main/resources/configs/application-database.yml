@@ -1,16 +1,16 @@
 spring:
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/restapp
+    url: jdbc:postgresql://localhost:5432/restapp
     username: root
-    password: 123
-
+    password: 123456
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
-    database: mariadb
     properties:
       hibernate:
         format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+

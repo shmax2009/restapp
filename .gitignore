@@ -33,4 +33,5 @@ build/
 .vscode/
 
 
-/src/main/resources/docker/mariadb/**
+/docker/postgres/**
+/src/main/resources/storage/**
