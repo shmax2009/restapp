@@ -10,3 +10,8 @@ application:
   storage:
     location: /home/maksym/Programming/Java/restapp/src/main/resources/storage/
     max-file-size: 10000000
+
+  security:
+    admin:
+      username: root
+      password: 123456

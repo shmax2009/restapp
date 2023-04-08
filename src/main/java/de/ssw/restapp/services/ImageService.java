@@ -1,6 +1,5 @@
 package de.ssw.restapp.services;
 
-
 import de.ssw.restapp.domain.errors.DeleteFromDatabaseException;
 import de.ssw.restapp.domain.errors.GetFromDatabaseException;
 import de.ssw.restapp.domain.errors.SaveToDatabaseException;

@@ -4,11 +4,13 @@ package de.ssw.restapp.controllers.stranger;
 import de.ssw.restapp.domain.errors.GetFromDatabaseException;
 import de.ssw.restapp.domain.errors.SaveToDatabaseException;
 import de.ssw.restapp.services.ImageService;
+import jakarta.annotation.security.PermitAll;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,7 +23,7 @@ public class ImageController {
 
     private final ImageService imageService;
 
-    @GetMapping(value = "load/{id}")
+    @GetMapping(value = "{id}")
     public ResponseEntity<Resource> load(@PathVariable Long id) {
         try {
             final var resource = imageService.getImageData(id);
@@ -37,6 +39,7 @@ public class ImageController {
     }
 
     @PutMapping("upload")
+    @Secured("ROLE_ADMIN")
     public ResponseEntity<String> save(@RequestBody MultipartFile file) {
         try {
             imageService.saveImage(file);

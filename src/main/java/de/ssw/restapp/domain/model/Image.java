@@ -20,7 +20,17 @@ public class Image {
 
     private String type;
 
+    private String getExtension(String type) {
+        if (type == null)
+            return null;
+        return switch (type) {
+            case "image/png" -> "png";
+            case "image/jpeg" -> "jpg";
+            default -> null;
+        };
+    }
+
     public String getName() {
-        return "#" + id.toString() + "." + type;
+        return "#" + id.toString() + "." + getExtension(type);
     }
 }
