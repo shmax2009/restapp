@@ -1,10 +1,9 @@
-package de.ssw.restapp.controllers.stranger;
+package de.ssw.restapp.controllers;
 
 
 import de.ssw.restapp.domain.errors.GetFromDatabaseException;
 import de.ssw.restapp.domain.errors.SaveToDatabaseException;
 import de.ssw.restapp.services.ImageService;
-import jakarta.annotation.security.PermitAll;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;
